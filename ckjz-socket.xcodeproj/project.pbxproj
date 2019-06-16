@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B262CD0722B6BC5300143663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD0622B6BC5300143663 /* AppDelegate.swift */; };
+		B262CD0922B6BC5300143663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD0822B6BC5300143663 /* ViewController.swift */; };
+		B262CD0B22B6BC5500143663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B262CD0A22B6BC5500143663 /* Assets.xcassets */; };
+		B262CD0E22B6BC5500143663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B262CD0C22B6BC5500143663 /* Main.storyboard */; };
+		B262CD2122B6BCEF00143663 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1622B6BCED00143663 /* JSONSerializer.swift */; };
+		B262CD2222B6BCEF00143663 /* ActionCableClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1722B6BCED00143663 /* ActionCableClient.swift */; };
+		B262CD2322B6BCEF00143663 /* SSLClientCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1822B6BCEE00143663 /* SSLClientCertificate.swift */; };
+		B262CD2422B6BCEF00143663 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1922B6BCEE00143663 /* SwiftyJSON.swift */; };
+		B262CD2522B6BCEF00143663 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1A22B6BCEE00143663 /* Channel.swift */; };
+		B262CD2622B6BCEF00143663 /* RetryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1B22B6BCEE00143663 /* RetryHandler.swift */; };
+		B262CD2722B6BCEF00143663 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1C22B6BCEE00143663 /* SSLSecurity.swift */; };
+		B262CD2822B6BCEF00143663 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1D22B6BCEE00143663 /* Compression.swift */; };
+		B262CD2922B6BCEF00143663 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1E22B6BCEE00143663 /* WebSocket.swift */; };
+		B262CD2A22B6BCEF00143663 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD1F22B6BCEE00143663 /* Error.swift */; };
+		B262CD2B22B6BCEF00143663 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262CD2022B6BCEF00143663 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B262CD0322B6BC5300143663 /* ckjz-socket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ckjz-socket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B262CD0622B6BC5300143663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B262CD0822B6BC5300143663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B262CD0A22B6BC5500143663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B262CD0D22B6BC5500143663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B262CD0F22B6BC5500143663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B262CD1022B6BC5500143663 /* ckjz_socket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ckjz_socket.entitlements; sourceTree = "<group>"; };
+		B262CD1622B6BCED00143663 /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		B262CD1722B6BCED00143663 /* ActionCableClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCableClient.swift; sourceTree = "<group>"; };
+		B262CD1822B6BCEE00143663 /* SSLClientCertificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLClientCertificate.swift; sourceTree = "<group>"; };
+		B262CD1922B6BCEE00143663 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		B262CD1A22B6BCEE00143663 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		B262CD1B22B6BCEE00143663 /* RetryHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryHandler.swift; sourceTree = "<group>"; };
+		B262CD1C22B6BCEE00143663 /* SSLSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLSecurity.swift; sourceTree = "<group>"; };
+		B262CD1D22B6BCEE00143663 /* Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compression.swift; sourceTree = "<group>"; };
+		B262CD1E22B6BCEE00143663 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		B262CD1F22B6BCEE00143663 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B262CD2022B6BCEF00143663 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B262CD0022B6BC5300143663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B262CCFA22B6BC5300143663 = {
+			isa = PBXGroup;
+			children = (
+				B262CD0522B6BC5300143663 /* ckjz-socket */,
+				B262CD0422B6BC5300143663 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B262CD0422B6BC5300143663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B262CD0322B6BC5300143663 /* ckjz-socket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B262CD0522B6BC5300143663 /* ckjz-socket */ = {
+			isa = PBXGroup;
+			children = (
+				B262CD0622B6BC5300143663 /* AppDelegate.swift */,
+				B262CD0822B6BC5300143663 /* ViewController.swift */,
+				B262CD1722B6BCED00143663 /* ActionCableClient.swift */,
+				B262CD1A22B6BCEE00143663 /* Channel.swift */,
+				B262CD1D22B6BCEE00143663 /* Compression.swift */,
+				B262CD2022B6BCEF00143663 /* Constants.swift */,
+				B262CD1F22B6BCEE00143663 /* Error.swift */,
+				B262CD1622B6BCED00143663 /* JSONSerializer.swift */,
+				B262CD1B22B6BCEE00143663 /* RetryHandler.swift */,
+				B262CD1822B6BCEE00143663 /* SSLClientCertificate.swift */,
+				B262CD1C22B6BCEE00143663 /* SSLSecurity.swift */,
+				B262CD1922B6BCEE00143663 /* SwiftyJSON.swift */,
+				B262CD1E22B6BCEE00143663 /* WebSocket.swift */,
+				B262CD0A22B6BC5500143663 /* Assets.xcassets */,
+				B262CD0C22B6BC5500143663 /* Main.storyboard */,
+				B262CD0F22B6BC5500143663 /* Info.plist */,
+				B262CD1022B6BC5500143663 /* ckjz_socket.entitlements */,
+			);
+			path = "ckjz-socket";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B262CD0222B6BC5300143663 /* ckjz-socket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B262CD1322B6BC5500143663 /* Build configuration list for PBXNativeTarget "ckjz-socket" */;
+			buildPhases = (
+				B262CCFF22B6BC5300143663 /* Sources */,
+				B262CD0022B6BC5300143663 /* Frameworks */,
+				B262CD0122B6BC5300143663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ckjz-socket";
+			productName = "ckjz-socket";
+			productReference = B262CD0322B6BC5300143663 /* ckjz-socket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B262CCFB22B6BC5300143663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = JohnnyBros;
+				TargetAttributes = {
+					B262CD0222B6BC5300143663 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B262CCFE22B6BC5300143663 /* Build configuration list for PBXProject "ckjz-socket" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B262CCFA22B6BC5300143663;
+			productRefGroup = B262CD0422B6BC5300143663 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B262CD0222B6BC5300143663 /* ckjz-socket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B262CD0122B6BC5300143663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B262CD0B22B6BC5500143663 /* Assets.xcassets in Resources */,
+				B262CD0E22B6BC5500143663 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B262CCFF22B6BC5300143663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B262CD2822B6BCEF00143663 /* Compression.swift in Sources */,
+				B262CD2522B6BCEF00143663 /* Channel.swift in Sources */,
+				B262CD2622B6BCEF00143663 /* RetryHandler.swift in Sources */,
+				B262CD2922B6BCEF00143663 /* WebSocket.swift in Sources */,
+				B262CD2A22B6BCEF00143663 /* Error.swift in Sources */,
+				B262CD0922B6BC5300143663 /* ViewController.swift in Sources */,
+				B262CD2122B6BCEF00143663 /* JSONSerializer.swift in Sources */,
+				B262CD2B22B6BCEF00143663 /* Constants.swift in Sources */,
+				B262CD2722B6BCEF00143663 /* SSLSecurity.swift in Sources */,
+				B262CD2322B6BCEF00143663 /* SSLClientCertificate.swift in Sources */,
+				B262CD2422B6BCEF00143663 /* SwiftyJSON.swift in Sources */,
+				B262CD2222B6BCEF00143663 /* ActionCableClient.swift in Sources */,
+				B262CD0722B6BC5300143663 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B262CD0C22B6BC5500143663 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B262CD0D22B6BC5500143663 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B262CD1122B6BC5500143663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B262CD1222B6BC5500143663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B262CD1422B6BC5500143663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ckjz-socket/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JB.ckjz-socket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B262CD1522B6BC5500143663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ckjz-socket/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JB.ckjz-socket";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B262CCFE22B6BC5300143663 /* Build configuration list for PBXProject "ckjz-socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B262CD1122B6BC5500143663 /* Debug */,
+				B262CD1222B6BC5500143663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B262CD1322B6BC5500143663 /* Build configuration list for PBXNativeTarget "ckjz-socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B262CD1422B6BC5500143663 /* Debug */,
+				B262CD1522B6BC5500143663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B262CCFB22B6BC5300143663 /* Project object */;
+}
