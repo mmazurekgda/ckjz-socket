@@ -13,7 +13,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let topBarStatusUrl = "https://johnnybros.com/t/sensors/top_bar_status"
-    let client = ActionCableClient(url: URL(string: "ws://johnnybros.com/cable")!);
+    let client = ActionCableClient(url: URL(string: "wss://johnnybros.com/cable")!);
     
     let statusItems: [String: NSStatusItem] = [
         "male": NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength),
