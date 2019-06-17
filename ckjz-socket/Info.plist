@@ -34,7 +34,7 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>localhost</key>
+			<key>johnnybros.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
