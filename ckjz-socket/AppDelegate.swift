@@ -12,6 +12,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    let topBarStatusUrl = "http://localhost:3000/t/sensors/top_bar_status"
     let client = ActionCableClient(url: URL(string: "ws://localhost:3000/cable")!);
     
     let statusItems: [String: NSStatusItem] = [
@@ -29,8 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        setButton(gender: "male", status: "open")
-        setButton(gender: "female", status: "open")
+        
         
         client.connect()
         
@@ -62,7 +62,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // A channel has successfully been subscribed to.
         sensorsChannel.onSubscribed = {
-            print("Yay!")
+            print("Subscribed to a SensorsChannel!")
+            let url = NSURL(string: self.topBarStatusUrl)
+            let request = NSURLRequest(url: url! as URL)
+            
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) {(response, data, error) in
+                let JSONObject = JSON(data!)
+                print(JSONObject["male"])
+                if let status = JSONObject["mode"] == true ? "closed" : "open" {
+                    self.setButton(gender: "male", status: status)
+                    self.setButton(gender: "female", status: status)
+                }
+            }
+                
         }
         
         // A channel was unsubscribed, either manually or from a client disconnect.
