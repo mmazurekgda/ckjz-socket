@@ -12,8 +12,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let topBarStatusUrl = "https://johnnybros.com/t/sensors/top_bar_status"
-    let client = ActionCableClient(url: URL(string: "wss://johnnybros.com/cable")!);
+    let topBarStatusUrl = "http://192.168.3.114:3000/t/sensors/top_bar_status"
+    let client = ActionCableClient(url: URL(string: "ws://192.168.3.114:3000/cable")!);
     
     let statusItems: [String: NSStatusItem] = [
         "male": NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength),
@@ -26,12 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name(gender + status))
         }
     }
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        
-        
-        
+    
+    
+    func connect() {
+    
         client.connect()
         
         client.onConnected = {
@@ -40,6 +38,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         client.onDisconnected = {(error: Error?) in
             print("Disconnected!")
+            self.setButton(gender: "male", status: "unknown")
+            self.setButton(gender: "female", status: "unknown")
+            self.setMenu(reconnectButton: true)
+        }
+        
+        self.client.willReconnect = {
+            print("Reconnecting to \(self.client.url)")
+            self.setButton(gender: "male", status: "unknown")
+            self.setButton(gender: "female", status: "unknown")
+            self.setMenu(reconnectButton: true)
+            return true
         }
         
         if(client.socket.isConnected) {
@@ -63,29 +72,66 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // A channel has successfully been subscribed to.
         sensorsChannel.onSubscribed = {
             print("Subscribed to a SensorsChannel!")
+            self.setMenu(reconnectButton: false)
             let url = NSURL(string: self.topBarStatusUrl)
             let request = NSURLRequest(url: url! as URL)
             
             NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) {(response, data, error) in
                 let JSONObject = JSON(data!)
-                print(JSONObject["male"])
-                if let status = JSONObject["mode"] == true ? "closed" : "open" {
+                if let status = JSONObject["male"] == true ? "closed" : "open" {
                     self.setButton(gender: "male", status: status)
+                }
+                if let status = JSONObject["female"] == true ? "closed" : "open" {
                     self.setButton(gender: "female", status: status)
                 }
             }
-                
+            
         }
         
         // A channel was unsubscribed, either manually or from a client disconnect.
         sensorsChannel.onUnsubscribed = {
             print("Unsubscribed")
+            self.setButton(gender: "male", status: "unknown")
+            self.setButton(gender: "female", status: "unknown")
+            self.setMenu(reconnectButton: true)
         }
         
         // The attempt at subscribing to a channel was rejected by the server.
         sensorsChannel.onRejected = {
             print("Rejected")
+            self.setButton(gender: "male", status: "unknown")
+            self.setButton(gender: "female", status: "unknown")
+            self.setMenu(reconnectButton: true)
         }
+    
+    
+    }
+    
+    @objc func reconnect(_ sender: Any?) {
+        client.reconnect()
+    }
+    
+    func setMenu(reconnectButton: Bool) {
+        let menu = NSMenu()
+    
+        if (reconnectButton) {
+            menu.addItem(NSMenuItem(title: "Reconnect to CKJZ", action: #selector(AppDelegate.reconnect(_:)),  keyEquivalent: "a"))
+        }
+        menu.addItem(NSMenuItem(title: "Quit CKJZ", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItems["male"]?.menu = menu
+        statusItems["female"]?.menu = menu
+    }
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Insert code here to initialize your application
+        
+        self.setButton(gender: "male", status: "unknown")
+        self.setButton(gender: "female", status: "unknown")
+        setMenu(reconnectButton: true)
+        
+        connect()
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
